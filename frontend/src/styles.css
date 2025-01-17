@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #1f2937, #111827); /* Dark gradient background */
+    color: #e4e7eb; /* Light text for dark mode */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 420px;
+    background-color: #2d3748; /* Dark background for the container */
+    padding: 40px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    border: 1px solid #4a5568; /* Dark border */
+    background-image: url('https://via.placeholder.com/600x400.png?text=Background+Image'); /* Example background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #e4e7eb; /* Light text for dark mode */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for text */
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #4a5568; /* Dark border */
+    border-radius: 8px;
+    font-size: 16px;
+    color: #e4e7eb;
+    background-color: #2d3748; /* Dark background */
+    box-sizing: border-box;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Focus State */
+input:focus {
+    border-color: #63b3ed;
+    outline: none;
+    background-color: #2d3748;
+}
+
+/* Button Styles */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #3490dc;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #1d72b8;
+    transform: scale(1.05);
+}
+
+/* Links */
+p {
+    text-align: center;
+    font-size: 14px;
+    color: #e4e7eb;
+}
+
+/* Links (Forgot password, Create account) */
+a {
+    color: #63b3ed;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #38b2ac;
+}
+
+/* Notification Box */
+.notification {
+    background-color: #2d3748;
+    color: #e4e7eb;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+/* Call to Action Button */
+.cta-button {
+    padding: 12px 30px;
+    background-color: #48bb78;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: #38a169;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
