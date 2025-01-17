@@ -1,13 +1,106 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Digital Receipts</title>
+    
+    <!-- Link to Tailwind CSS via CDN (Use link tag for CSS) -->
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+
+    <!-- Link to your custom styles (Make sure the path is correct) -->
+    <link href="src/styles.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <!-- Container for the form sections -->
+    <div class="container max-w-md bg-white shadow-lg rounded-lg p-8">
+        
+        <!-- Login Form -->
+        <div class="form-container" id="login-container">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-800">Login</h2>
+            <form id="login-form" class="space-y-4">
+                <input 
+                    type="email" 
+                    id="email" 
+                    placeholder="Email" 
+                    required 
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                <input 
+                    type="password" 
+                    id="password" 
+                    placeholder="Password" 
+                    required 
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                <button 
+                    type="submit" 
+                    class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">
+                    Login
+                </button>
+                <p class="text-sm text-center text-gray-600">
+                    <a href="#" id="reset-link" class="text-blue-500 hover:underline">Forgot your password?</a>
+                </p>
+                <p class="text-sm text-center text-gray-600">
+                    Don't have an account? 
+                    <a href="#" id="signup-link" class="text-blue-500 hover:underline">Create one</a>
+                </p>
+            </form>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="form-container" id="signup-container" style="display: none;">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-800">Create Account</h2>
+            <form id="signup-form" class="space-y-4">
+                <input 
+                    type="email" 
+                    id="signup-email" 
+                    placeholder="Email" 
+                    required 
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                <input 
+                    type="password" 
+                    id="signup-password" 
+                    placeholder="Password" 
+                    required 
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                <button 
+                    type="submit" 
+                    class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">
+                    Sign Up
+                </button>
+                <p class="text-sm text-center text-gray-600">
+                    Already have an account? 
+                    <a href="#" id="login-link" class="text-blue-500 hover:underline">Login</a>
+                </p>
+            </form>
+        </div>
+
+        <!-- Reset Password Form -->
+        <div class="form-container" id="reset-container" style="display: none;">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-800">Reset Password</h2>
+            <form id="reset-form" class="space-y-4">
+                <input 
+                    type="email" 
+                    id="reset-email" 
+                    placeholder="Enter your email" 
+                    required 
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                <button 
+                    type="submit" 
+                    class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">
+                    Reset Password
+                </button>
+                <p class="text-sm text-center text-gray-600">
+                    Remembered your password? 
+                    <a href="#" id="back-login-link" class="text-blue-500 hover:underline">Back to Login</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Link to your JavaScript file (Make sure the path is correct) -->
+    <script src="src/script.js"></script>
+</body>
+
 </html>
